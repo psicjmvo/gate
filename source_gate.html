@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metanoia Atrium | The Sovereign Gate</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #F5F5F5;
+            --accent: #FFBF00;
+            --shadow: rgba(0, 0, 0, 0.9);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz,wght@6..96,400&display=swap');
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Bodoni Moda SC', serif;
+            overflow: hidden;
+            text-align: center;
+            transition: background 1s ease;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            color: var(--text);
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .input-group {
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 0.5rem;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            text-transform: uppercase;
+            transition: border-color 0.5s;
+        }
+
+        input[type="text"]:focus {
+            border-bottom-color: var(--accent);
+        }
+
+        .status {
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            color: #444;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .success-page {
+            display: none;
+            animation: fadeIn 3s ease;
+        }
+
+        .success-title {
+            font-size: 2rem;
+            letter-spacing: 0.4rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .nda-link {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            padding: 15px 30px;
+            border: 1px solid var(--accent);
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nda-link:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .error-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="gate-container" class="container">
+        <div class="title">ENTER THE EIGHT PILLARS</div>
+        <div class="input-group">
+            <input type="text" id="pillar-key" placeholder="........" autocomplete="off" spellcheck="false" onkeydown="if(event.key === 'Enter') validateKey()">
+        </div>
+        <div class="status">THE FREQUENCY IS LISTENING.</div>
+    </div>
+
+    <div id="success-container" class="container success-page">
+        <div class="success-title">NDA UNLOCKED</div>
+        <div class="legend" style="margin-bottom: 60px; font-size: 0.9rem; letter-spacing: 0.1rem; color: #AAA;">
+            Subject identity confirmed. Access granted to Phase II Enrollment.
+        </div>
+        <a href="https://metanoia.atrium/nda-portal/veto-fee" class="nda-link">SIGN NDA & ENROLL</a>
+    </div>
+
+    <div id="error-overlay" class="error-overlay"></div>
+
+    <script>
+        const MASTER_KEY = "1123ALETHEIACATHARSISMETANOIAKENOSIS";
+
+        function validateKey() {
+            const input = document.getElementById('pillar-key').value.toUpperCase().replace(/\s/g, '');
+            const container = document.getElementById('gate-container');
+            const success = document.getElementById('success-container');
+            const error = document.getElementById('error-overlay');
+
+            if (input === MASTER_KEY) {
+                container.style.display = 'none';
+                success.style.display = 'block';
+                document.body.style.background = "#050505";
+            } else {
+                // Brutalist failure logic: ZERO feedback, pure black screen
+                container.style.display = 'none';
+                error.style.display = 'block';
+                // Periodic refresh after a few seconds of silence
+                setTimeout(() => {
+                    location.reload();
+                }, 10000);
+            }
+        }
+    </script>
+</body>
+</html>

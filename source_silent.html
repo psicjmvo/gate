@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metanoia Atrium | The Gate</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #F5F5F5;
+            --accent: #FFBF00;
+            --shadow: rgba(0, 0, 0, 0.9);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz,wght@6..96,400&display=swap');
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Bodoni Moda SC', serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        img.staircase {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 1px solid #333;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            margin-bottom: 40px;
+            filter: contrast(1.2) grayscale(0.5);
+        }
+
+        .legend {
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            line-height: 1.8;
+            margin-bottom: 60px;
+            color: #AAA;
+            text-transform: uppercase;
+        }
+
+        .hint {
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: #555;
+            font-style: italic;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Interaction Block */
+        .gate-inactive {
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="gate-inactive">
+    <div class="container">
+        <img src="img/spiral.png" alt="Sovereign Gate" class="staircase">
+        <div class="legend">
+            The gate is not open. <br>
+            A seat in the Atrium cannot be bought; <br>
+            it must be earned.
+        </div>
+        <div class="hint">
+            The key to open the door is inside the content; look for it. <br>
+            The golden spiral and the four Greek pillars will lead your way.
+        </div>
+    </div>
+</body>
+</html>

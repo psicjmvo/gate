@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metanoia Atrium | The Gate (Warm-up)</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #F5F5F5;
+            --accent: #FFBF00;
+            --shadow: rgba(0, 0, 0, 0.9);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz,wght@6..96,400&display=swap');
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Bodoni Moda SC', serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            animation: pulse 4s infinite alternate;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            letter-spacing: 0.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 0.3rem;
+            color: #AAA;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .status {
+            font-size: 1rem;
+            color: #555;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            border: 1px solid #333;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        @keyframes pulse {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">IMMINENT GATE</div>
+        <div class="subtitle">The Window of Integration is approaching.</div>
+        <div class="status">SYSTEM CHECK: SYNCHRONIZING CALENDAR</div>
+    </div>
+</body>
+</html>
