@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metanoia Atrium | Diagnosis</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #F5F5F5;
+            --accent: #FFBF00;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz,wght@6..96,400&display=swap');
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Bodoni Moda SC', serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            animation: fadeIn 4s ease;
+        }
+
+        img.clinical-tool {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin-bottom: 60px;
+            filter: brightness(0.8) contrast(1.2);
+            border: 1px solid #111;
+        }
+
+        .legend {
+            font-size: 1.4rem;
+            letter-spacing: 0.3rem;
+            color: var(--text);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .efficiency-mask {
+            font-size: 0.9rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.8;
+            color: #777;
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 40px;
+            border-top: 1px solid #222;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../img/clinical_tool.png" alt="Clinical Tool" class="clinical-tool">
+        <div class="legend">
+            The Toll is paid. <br>
+            Your confession has entered the Abyss.
+        </div>
+        <div class="efficiency-mask">
+            The Mentor will now perform a clinical deconstruction of your Shadow. This process requires 48 to 72 hours of surgical silence. You will be contacted only if your Caliber is found sufficient for integration. Do not seek us; we will find you.
+        </div>
+    </div>
+</body>
+</html>
